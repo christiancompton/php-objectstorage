@@ -1,0 +1,1 @@
+Congratulations, you've uploaded a file to Object Storage for Bluemix!

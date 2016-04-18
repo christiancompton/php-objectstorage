@@ -1,0 +1,5 @@
+{
+    "require": {
+        "php-opencloud/openstack": "^2.0"
+    }
+}
