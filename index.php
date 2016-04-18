@@ -11,7 +11,6 @@ if ($services = getenv("VCAP_SERVICES")) {
   $userId = $services_json["Object-Storage"][0]["credentials"]["userId"];
   $password = $services_json["Object-Storage"][0]["credentials"]["password"];
   $projectId = $services_json["Object-Storage"][0]["credentials"]["projectId"];
-  //echo "Object Storage Credentials: " . $authUrl . " " . $region . " " . $userId . " " . $password . " " . $projectId . "\n";
 } else {
   throw new Exception('Not in Bluemix environment');
 }
@@ -41,8 +40,6 @@ $token = $identity->generateToken([
 ]);
 
 $tokenId = $token->getId();
-
-//echo "My Keystone token: " . $tokenId;
 ?>
 <!-- Create a container and upload a file -->
 
@@ -70,8 +67,6 @@ $options = [
 $object = $openstack->objectStoreV1()
                     ->getContainer($containerName)
                     ->createObject($options);
-
-//echo "Check the bound instance of Object Storage to view these two items in the file browser."
 ?>
 
 <!-- Display Information -->
